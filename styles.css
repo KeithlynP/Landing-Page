@@ -1,0 +1,283 @@
+body {
+    font-family: "Poppins", sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "acerca-de"
+        "como-ayudar"
+        "testimonios"
+        "galeria"
+        "formulario"
+        "formulario-mobile"
+        "footer";
+    grid-template-columns: 1fr;
+}
+
+header, section, footer {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    grid-area: header;
+    background: linear-gradient(135deg, #1e3a8a 0%, #10b981 100%);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+#acerca-de {
+    grid-area: acerca-de;
+    background-color: #ffffff;
+}
+
+#acerca-de h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1e3a8a;
+    position: relative;
+}
+
+#acerca-de h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: #1e3a8a;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#acerca-de p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+#como-ayudar {
+    grid-area: como-ayudar;
+    background-color: #e7f8f0;
+}
+
+#como-ayudar h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #10b981;
+    position: relative;
+}
+
+#como-ayudar h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background-color: #10b981;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#testimonios {
+    grid-area: testimonios;
+    background-color: #ffffff;
+}
+
+#testimonios h2 {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.fila-testimonios {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #f0f4ff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#galeria {
+    grid-area: galeria;
+    background-color: #ffffff;
+}
+
+#galeria h2 {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.fila-imagenes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.fila-imagenes img {
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#formulario {
+    grid-area: formulario;
+}
+
+#formulario h2 {
+    font-size: 2rem;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+}
+
+.fila-formulario {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.fila-formulario input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.fila-formulario button {
+    padding: 10px 20px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#formulario-mobile {
+    display: none;
+    grid-area: formulario-mobile;
+}
+
+.boton-mobile {
+    background-color: #10b981;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 30px 20px;
+}
+
+footer p {
+    margin: 0;
+    opacity: 0.8;
+}
+
+.form-header {
+    grid-area: header;
+    background: linear-gradient(135deg, #1e3a8a 0%, #10b981 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#formulario-completo {
+    grid-area: acerca-de;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.formulario-suscripcion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.formulario-suscripcion input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.formulario-suscripcion button {
+    padding: 10px;
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-regresar {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #10b981;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .fila-testimonios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fila-imagenes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #formulario {
+        display: none;
+    }
+
+    #formulario-mobile {
+        display: block;
+    }
+}
